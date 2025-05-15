@@ -1,12 +1,14 @@
+import Sidebar from '@/components/Sidebar';
+
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ padding: '2rem', border: '2px dashed #999' }}>
-      <h2>Dashboard Layout</h2>
-      <div>{children}</div>
+    <div style={{ display: 'flex' }}>
+      <Sidebar />
+      <div style={{ flex: 1, padding: '2rem' }}>{children}</div>
     </div>
   );
 }
